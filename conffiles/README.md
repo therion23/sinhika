@@ -1,8 +1,6 @@
 # conffiles
 
-All of these belong in /usr/local/etc
-
-## asound.conf
+## /etc/asound.conf
 
 The whole magick in this is threefold:
 
