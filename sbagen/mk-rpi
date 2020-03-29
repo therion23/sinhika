@@ -1,0 +1,11 @@
+# gcc <= 6
+OPT='-DT_LINUX -Wall -O3 -s'
+# gcc >= 7
+OPT='-DT_LINUX -Wall -O3 -s -std=gnu89'
+LIBS='-lm -lpthread'
+
+    OPT="-DMP3_DECODE -DOGG_DECODE $OPT"
+    LIBS="$LIBS -lmad -lvorbisidec"
+
+cc $OPT sbagen.c $LIBS -o sbagen || exit 1
+
