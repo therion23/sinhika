@@ -13,9 +13,13 @@ The whole magick in this is threefold:
 Put this in /etc/asound.conf and then
 
 sudo /etc/init.d/alsa-utils restart
+
 speaker-test
+
 (hit ctrl-c)
+
 speaker-test -D mpd
+
 (hit ctrl-c)
 
 Then they should both show up in alsamixer.
