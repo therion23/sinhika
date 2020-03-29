@@ -2,6 +2,36 @@
 
 A framework and patchwork to possibly abstract from tinnitus.
 
+## Before you read on
+
+This is not run by any financial interests. The sinhika project is copyrighted the creators, but free for all to grab a copy and use, as long as the terms in the file LICENSE is met.
+
+We accept no money, bribes, or anything else. If you want to help, go to your local health department, and give them some kind of awareness what tinnitus is.
+
+## Disclaimer
+
+We at Nocturnal Productions take NO responsibility for the outcome of using this program, whatever they might be, neither before nor after you have either 1) read this Disclaimer or 2) attempted to run or use a sinhika or any of its components, hereafter collectively referred to as the Application. Neither do we take responsibility for damages, whatever they are financial, mental or anything else that can be related to the Application. We will warn you, that during the creation of sinhika, some problems and accidental deletion of files have occurred, and although we cannot find any errors left, there might be some left (there always are, aren't there?).
+
+YOU ARE FULLY RESPONSIBLE FOR CHOOSING, INSTALLING, USAGE, AND THE RESULTS OF USE OF THIS SOFTWARE. THE AUTHOR PLACES NO GUARANTEE WHATSOEVER ON THE EXECUTION OR OTHERWISE USAGE OF THE APPLICATION.
+
+Having said that, WE DISALLOW YOU TO USE THIS PROGRAM if You cannot abide to the above disclaimer, whatever Your reasons may be. This program is, although copyrighted by Nocturnal Productions, FREE SOFTWARE, and when You pay nothing, expect nothing!
+
+If you cannot abide to this simple Disclaimer, then i, Bo Krogsgaard, as the author, FORBID you to execute or in other ways use this Application, as *YOU* havent paid *ME* a single dime, pfennig or other monetary unit for your copy.
+
+Alternative version:
+
+I constructed this in good faith for the sole purpose of helping people, not screwing up their computers. If anything bums out in the Application, drop me a note and i will try to fix it as soon as possible, but if your dog dies or you get syphilis (or the other way around), it sure as fuck isn't because of the Application.
+
+Basically, if this Application fucks up your computer, your life or ANYTHING else, don't blame me. If you invoke sinhika, you agree to paying me twice the amount of what you sue me for in case it does not work on your computer, and furthermore, you also agree to pay me two round trip airplane tickets to a destination of my choice within seven (7) days of my request, verbally, written, electronic or otherwise.
+
+Oh, and a sixpack.
+
+Of course, any damage that aapt.exe, unzip.exe or sqlite3.dll can or may do to your computer is beyond my scope, do read their disclaimers as well.
+
+Really short version:
+
+I'm trying to do you a favour, don't be a dick about it if i fail.
+
 ## Synopsis
 
 Tinnitus is hell. If you go to an ear doctor, he or she might go "buy a radio". Facts are, it can come from many things, from a concussion to overexposure to loud noises to .. well, you name it. And as long as nobody can find the source, good luck finding a cure.
