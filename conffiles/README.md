@@ -1,6 +1,6 @@
 # conffiles
 
-## /etc/asound.conf
+## asound.conf
 
 The whole magick in this is threefold:
 
@@ -9,6 +9,16 @@ The whole magick in this is threefold:
 - two, you get the advantage of software volume controlling DAC's and other sound devices which do not have hardware volume controls - notably, the pHAT DAC and the HifiBerry it was modelled after.
 
 - three, you get a definition for the OSS layer emulation that you can tinker with yourself if need be.
+
+Put this in /etc/asound.conf and then
+
+sudo /etc/init.d/alsa-utils restart
+speaker-test
+(hit ctrl-c)
+speaker-test -D mpd
+(hit ctrl-c)
+
+Then they should both show up in alsamixer.
 
 ## rc.local
 
