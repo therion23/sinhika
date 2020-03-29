@@ -1,0 +1,3 @@
+# Fixes the eternal MPD problem of not doing IPv4 if it can bind to IPv6
+
+/sbin/sysctl -q net.ipv6.bindv6only=1
