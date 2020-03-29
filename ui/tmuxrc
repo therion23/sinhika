@@ -1,0 +1,7 @@
+new-session
+new-window ncmpcpp
+split-window -v alsamixer
+split-window -h ~/dialog.sh
+select-pane -t 0
+split-window -h bash
+select-pane -t 0

@@ -1,0 +1,22 @@
+startup_message off
+screen -t ncmpcpp 1 ncmpcpp
+screen -t sbagen 2 bash
+screen -t alsamixer 3 alsamixer
+screen -t cpanel 4 bash -c /home/t23/dialog.sh
+focus top
+select 1
+split -h
+focus down
+select 3
+split -v
+focus right
+select 4
+focus top
+split -v
+focus right
+select 2
+focus top
+focus down
+stuff ^L
+focus top
+
