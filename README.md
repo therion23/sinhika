@@ -1,3 +1,3 @@
 # sinhika
 
-A framework and patchwork to possibly abstract from tinnitus
+A framework and patchwork to possibly abstract from tinnitus.
