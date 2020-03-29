@@ -2,6 +2,14 @@
 
 A framework and patchwork to possibly abstract from tinnitus.
 
+## Synopsis
+
+Tinnitus is hell. If you go to an ear doctor, he or she might go "buy a radio". Facts are, it can come from many things, from a concussion to overexposure to loud noises to .. well, you name it. And as long as nobody can find the source, good luck finding a cure.
+
+Now, what a very clever guy (i believe it was Harry Nyquist, but i might be wrong) found out once, was that some frequencies can cancel out eachother. It is not that simple though. So drawing from that idea, this project sets up a sound card with independent channels for music and distraction frequencies, latter being binaural patterns or pure pink noise, modulated as you wish.
+
+This does not fix any of your problems. But it might help a little bit.
+
 ## Platform requirements
 
 The whole idea started out on a Raspberry Pi 1 Model B running the Raspbian flavour of Linux. It is a single core 700MHz ARMv6 based system with 512MB RAM, and can fairly much run a dual MPD server if you roll your own.
