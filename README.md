@@ -26,8 +26,6 @@ Basically, if this Application fucks up your computer, your life or ANYTHING els
 
 Oh, and a sixpack.
 
-Of course, any damage that aapt.exe, unzip.exe or sqlite3.dll can or may do to your computer is beyond my scope, do read their disclaimers as well.
-
 Really short version:
 
 I'm trying to do you a favour, don't be a dick about it if i fail.
