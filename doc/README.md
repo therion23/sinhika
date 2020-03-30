@@ -4,7 +4,8 @@ Bulding a sinhika makes a few assumptions. One of them is the Debian'ness of /et
 
 This is usually done behind the curtains for you, however, if in doubt:
 
-```sudo touch /etc/staff-group-for-usr-local
+```
+sudo touch /etc/staff-group-for-usr-local
 sudo chmod -R g+s /usr/local
 sudo chgrp -R staff /usr/local
 ```
