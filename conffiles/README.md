@@ -12,14 +12,14 @@ The whole magick in this is threefold:
 
 Put this in /etc/asound.conf and then
 
-```
+```bash
 sudo /etc/init.d/alsa-utils restart
 speaker-test
 ```
 
 (hit ctrl-c)
 
-```
+```bash
 speaker-test -D mpd
 ```  
 (hit ctrl-c)
