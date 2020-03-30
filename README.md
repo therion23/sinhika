@@ -24,15 +24,15 @@ If you cannot abide to this simple Disclaimer, then i, Bo Krogsgaard, as the res
 
 Alternative version:
 
-I constructed this in good faith for the sole purpose of helping people, not screwing up their computers. If anything bums out in the Application, drop me a note and i will try to fix it as soon as possible, but if your dog dies or you get syphilis (or the other way around), it sure isn't because of the Application.
+This was constructed in good faith for the sole purpose of helping people, not screwing up their computers. If anything bums out in the Application, drop us a note and we will try to fix it as soon as possible, but if your dog dies or you get syphilis (or the other way around), it sure isn't because of the Application.
 
-Basically, if this Application screws up your computer, your life or ANYTHING else, don't blame me. If you invoke sinhika, you agree to paying me twice the amount of what you sue me for in case it does not work on your computer, and furthermore, you also agree to pay me two round trip airplane tickets to a destination of my choice within seven (7) days of my request, verbally, written, electronic or otherwise.
+Basically, if this Application screws up your computer, your life or ANYTHING else, don't blame us. If you invoke sinhika, you agree to paying us twice the amount of what you sue us for in case it does not work on your computer, and furthermore, you also agree to pay us two round trip airplane tickets to a destination of our choice - per team member - within seven (7) days of my request, verbally, written, electronic or otherwise.
 
-Oh, and a sixpack.
+Oh, and a sixpack. Per contributor.
 
 Really short version:
 
-I'm trying to do you a favour, don't be a dick about it if i fail.
+We are trying to do you a favour, don't be a dick about it if we fail.
 
 ## Synopsis
 
