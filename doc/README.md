@@ -6,7 +6,7 @@ This is usually done behind the curtains for you, however, if in doubt:
 
 ```sudo touch /etc/staff-group-for-usr-local
 sudo chmod -R g+s /usr/local
-sudo chgrp -R /usr/local
+sudo chgrp -R staff /usr/local
 ```
 
 Given the fact that you are not likely to run this on a shared server, this is not considered a security hole.

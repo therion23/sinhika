@@ -2,6 +2,10 @@
 
 A framework and patchwork to possibly abstract from tinnitus.
 
+## Before you even have anything to read
+
+This documentation is updated frequently. One might even say rapidly. Truth be i lost a lot of my notework, so it goes "oh this bit needs to go in there" and repeat as necessary. You get the idea. As such, this project is very incomplete and even worse documented, however, i promise you that i am working on that with all my spare moments. Okay? Okay!
+
 ## Before you read on
 
 This is not run by any financial interests. The sinhika project is copyrighted the creators, but free for all to grab a copy and use, as long as the terms in the file LICENSE is met.
