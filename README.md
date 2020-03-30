@@ -16,7 +16,7 @@ This documentation is updated frequently. One might even say rapidly. Truth be i
 
 We at Nocturnal Productions take NO responsibility for the outcome of using this program, whatever they might be, neither before nor after you have either 1) read this Disclaimer or 2) attempted to run or use a sinhika or any of its components, hereafter collectively referred to as the Application. Neither do we take responsibility for damages, whatever they are financial, mental or anything else that can be related to the Application. We will warn you, that during the creation of sinhika, some problems and accidental deletion of files have occurred, and although we cannot find any errors left, there might be some left (there always are, aren't there?).
 
-YOU ARE FULLY RESPONSIBLE FOR CHOOSING, INSTALLING, USAGE, AND THE RESULTS OF USE OF THIS SOFTWARE. THE AUTHOR PLACES NO GUARANTEE WHATSOEVER ON THE EXECUTION OR OTHERWISE USAGE OF THE APPLICATION.
+YOU ARE FULLY RESPONSIBLE FOR CHOOSING, INSTALLING, USAGE, AND THE RESULTS OF USE OF THIS SOFTWARE. THE AUTHORS PLACE NO GUARANTEE WHATSOEVER ON THE EXECUTION OR OTHERWISE USAGE OF THE APPLICATION.
 
 Having said that, WE DISALLOW YOU TO USE THIS PROGRAM if You cannot abide to the above disclaimer, whatever Your reasons may be. This program is, although copyrighted by Nocturnal Productions, FREE SOFTWARE, and when You pay nothing, expect nothing!
 
