@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+$| = 1;
+
+open HEADER, "< ./HEADER";
+print <HEADER>;
+close HEADER;
+my @dirs = </media/binaurals/*>;
+foreach my $dir (@dirs) {
+  my $encdir = $dir;
+  $dir = basename($dir);
+  $encdir =~ s/\ /%20/g;
+  print('<header><a href="/cgi-bin/writebinaurals?' . $encdir . '">' . $dir . '</a></header>' . "\n");
+}
+print('<header><a href="/">Back</a></header>' . "\n");
+open FOOTER, "< ./FOOTER";
+print <FOOTER>;
+close FOOTER;

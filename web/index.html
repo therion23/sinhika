@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link rel='icon' href='data:;base64,'> -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="reply-to" content="t23@cabaretvoltaire.net" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="author" content="Bo Krogsgaard" />
+<meta name="copyright" content="&copy; 1995-2019 Bo Krogsgaard" />
+<meta name="generator" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="noarchive" />
+<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<title>Ganesha</title>
+<link rel="icon" type="image/png" href="/favicon.png" />
+
+<style type="text/css" media="screen">
+@import url(style.css);
+</style>
+
+<script src="jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $("#killall").click(function(){
+    var r = confirm("Are you sure?");
+    if (r == true) {
+      $.get("/cgi-bin/killall");
+    }
+  });
+  $("#killall").hover(function(){ $("#killall").css("color", "yellow") },
+    function(){ $("#killall").css("color", "red") }); 
+});
+
+$(document).ready(function(){
+  $("#killmpd").click(function(){
+    var r = confirm("Are you sure?");
+    if (r == true) {
+      $.get("/cgi-bin/killmpd");
+    }
+  });
+  $("#killmpd").hover(function(){ $("#killmpd").css("color", "yellow") },
+    function(){ $("#killmpd").css("color", "red") }); 
+});
+
+$(document).ready(function(){
+  $("#killjs").click(function(){
+    var r = confirm("Are you sure?");
+    if (r == true) {
+      $.get("/cgi-bin/killjs");
+    }
+  });
+  $("#killjs").hover(function(){ $("#killjs").css("color", "yellow") },
+    function(){ $("#killjs").css("color", "red") }); 
+});
+
+$(document).ready(function(){
+  $("#reboot").click(function(){
+    var r = confirm("Are you sure?");
+    if (r == true) {
+      $.get("/cgi-bin/reboot");
+    }
+  });
+  $("#reboot").hover(function(){ $("#reboot").css("color", "yellow") },
+    function(){ $("#reboot").css("color", "red") }); 
+});
+
+</script>
+
+</head>
+
+<body>
+
+<section><header>Ganesha<span>remover of obstacles</span></header>
+<!-- <p>Test of layout</p> -->
+</section>
+
+<section>
+<div><a href="/cgi-bin/playrandom">MPD Random Album</a><br /><a href="/cgi-bin/stopmpd">(Play/Pause)</a></div>
+<div><a href="/cgi-bin/sba">SBAgen (Previous)</a><br /><a href="/cgi-bin/picksba">(Browse)</a>&nbsp;<a href="/cgi-bin/killsba">(Stop)</a></div>
+<div><a href="/cgi-bin/heartbeat">Heartbeat</a><br /><a href="/cgi-bin/">(edit)</a>&nbsp;<a href="/cgi-bin/killct">(stop)</a></div>
+<div><a href="/cgi-bin/keepalive">KeepAlive (24/192)</a><br /><a href="/cgi-bin/killalive">(Stop)</a></div>
+<div><a href="/cgi-bin/playlist">Server playlist</a><br />(Raw output)</div>
+<div><a href="/cgi-bin/status">Server status</a><br />(System, MPD, SBA)</div>
+<div><a href="/cgi-bin/">Scheduler</a><br />(Not implemented)</div>
+<div id="killall">Silence<br />(kill everyone now)</div>
+<!-- <div id="killmpd">Restart MPD<br />(Just in case)</div> -->
+<!-- <div id="killjs">(Re)start jslisten<br />(After reboot)</div> -->
+<div id="reboot">Reboot<br />(Last resort)</div>
+<div>&nbsp;<br />&nbsp;</div>
+<div>&nbsp;<br />&nbsp;</div>
+<div>&nbsp;<br />&nbsp;</div>
+</section>
+
+&nbsp;
+
+<section><header>Last revision<span>2019-05-30</span></header>
+<!-- <p>Test of layout</p> -->
+</section>
+
+<footer><center>Copyright &copy; and Kopyleft (K) 2015-2019 Bo Krogsgaard (<a href="skype:bo.krogsgaard?chat">Skype</a> - <a href="https://t.me/therion23">Telegram</a>) &mdash; some rights reserved.</center></footer>
+</body>
+</html>

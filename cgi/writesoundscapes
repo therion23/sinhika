@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+$| = 1;
+
+my $buffer = $ENV{'QUERY_STRING'};
+$buffer =~ s/%20/\ /g;
+open DATAFILE, "> ../config/soundscapes";
+print (DATAFILE $buffer);
+close DATAFILE;
+
+system('killall -9q play > /dev/null 2> /dev/null &');
+
+print("HTTP/1.1 200 OK\n");
+print("Location: /cgi-bin/rain1\n\n");

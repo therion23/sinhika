@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# echo Starting the heart
+system('aoss ctronome -w1 /usr/local/share/ctronome/heartbeat.wav -w2 /usr/local/share/ctronome/heartbeat.wav > /dev/null 2> /dev/null &');
+print("HTTP/1.1 200 OK\n");
+print("Location: /\n\n");

@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0em;
+  outline: none;
+  padding: 0em;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #000;
+  color: #f00;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14pt;
+}
+
+a {
+  color: #ff0;
+/*  font-weight: bold; */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 0.2em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > ul {
+  margin-left: 1.5em;
+}
+
+li:before {
+  content: "¥ ";
+}
+
+body > nav {
+  line-height: 1em;
+}
+
+body > nav ul {
+  border: 1px solid #000;
+  list-style: none;
+  z-index: 2;
+}
+
+body > nav li {
+  background: #111;
+  cursor: default;
+}
+
+body > nav li:before {
+  content: none;
+}
+
+body > nav li:hover {
+  background: #444;
+}
+
+body > nav a {
+  color: #ddd;
+  display: block;
+  padding: 0.75em 1.25em;
+}
+
+body > nav > ul {
+  background: #000;
+  border: 0px;
+  border-bottom: 1px solid #000;
+  display: block;
+  position: relative;
+}
+
+body > nav > ul > li {
+  display: inline-block;
+  transition: all 0.25s;
+}
+
+body > nav > ul ul {
+  box-shadow: 0.2em 0.2em 0.2em #888;
+}
+
+body > nav > ul > li > ul {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.25s;
+  visibility: hidden;
+  width: 18em;
+}
+
+body > nav > ul > li:hover > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+body > nav > ul > li > ul > li {
+  display: block;
+  position: relative;
+}
+
+body > nav > ul > li > ul > li > ul {
+  display: inline-block;
+  left: 100%;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  transition: opacity 0.25s;
+  visibility: hidden;
+  width: 18em;
+}
+
+body > nav > ul > li > ul > li:hover > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+body > nav > ul > li > ul > li > ul > li {
+  display: block;
+  position: relative;
+}
+
+body {
+  padding: 0.5em;
+}
+
+body > nav {
+  margin: -0.5em;
+  margin-bottom: 0.5em;
+}
+
+body > header, body > h1 {
+  font-size: 20pt;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+body > footer {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+section {
+  background: #111;
+  border: 1px solid #000;
+  margin-bottom: 1em;
+}
+
+section > form {
+  padding: 0.5em;
+}
+
+section > header {
+  color: #ff0;
+  background: #555;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+section > header > span {
+  float: right;
+  font-family: Geneva, DejaVu Sans, sans-serif;
+}
+
+section > h1 {
+  color: #ff0;
+  background: #555;
+  border-bottom: 1px solid #888;
+  border-top: 1px solid #888;
+  font-size: 1em;
+  padding: 0.2em 0.5em;
+}
+
+section > h2 {
+  background: #555;
+  border: 1px solid #cbb;
+  font-size: 1em;
+  margin: 0.5em;
+  padding: 0.2em 0.5em;
+}
+
+section > nav {
+  padding: 0.5em;
+}
+
+section > p {
+/*
+ *  max-width: 80em;
+ */
+}
+
+section > p, section > ul {
+  padding: 0.5em;
+}
+
+section > pre {
+  background: #eef;
+  border: 1px solid #bbc;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+section > table {
+  border-collapse: separate;
+  margin: 0em;
+  padding: 0.5em;
+}
+
+section > table th {
+  background: #eef;
+  text-align: left;
+}
+
+section > table tr:nth-child(odd) {
+  background: #eee;
+}
+
+section > table th, table td {
+  border: 1px solid #ccc;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+section > table td {
+  width: 25%;
+  vertical-align: text-top;
+}
+
+section > table tr {
+  height: 200px;
+}
+
+section > div {
+  border: 1px solid #ddd;
+  background: #111;
+  margin: 0px;
+  padding: 0.5em;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+/*  height: 25%; */
+/*  min-height: 75px; */
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  section > div {
+    width: 50%;
+/*    height: 12.5%; */
+/*    min-height: 75px; */
+  }
+}

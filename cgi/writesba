@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+$| = 1;
+
+my $buffer = $ENV{'QUERY_STRING'};
+$buffer =~ s/%20/\ /g;
+$buffer = "/usr/local/share/sbagen/" . $buffer;
+open DATAFILE, "> ../config/sba";
+print (DATAFILE $buffer);
+close DATAFILE;
+
+system('killall -9q sbagen > /dev/null 2> /dev/null &');
+
+print("HTTP/1.1 200 OK\n");
+print("Location: /cgi-bin/sba\n\n");

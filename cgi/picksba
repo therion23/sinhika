@@ -1,0 +1,45 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+$| = 1;
+
+print("HTTP/1.1 200 OK\n");
+print "Content-type: text/html\n\n";
+
+open HEADER, "< ./HEADER";
+print <HEADER>;
+close HEADER;
+
+my $qs = '';
+
+$qs = $ENV{'QUERY_STRING'};
+
+if (!defined($qs)) {
+  my @dirs = <"/usr/local/share/sbagen/*">;
+  foreach my $dir (@dirs) {
+    my $encdir = $dir;
+    $dir = basename($dir);
+    $encdir =~ s/\ /%20/g;
+    print('<div><a href="/cgi-bin/picksba?' . $dir . '">' . $dir . '</a></div>' . "\n");
+  }
+  print("</section>&nbsp;<section>\n");
+  print('<header><a href="/">Back</a></header>' . "\n");
+} else {
+  my $basepath = "/usr/local/share/sbagen/" . $qs . "/*";
+  my @dirs = <"$basepath">;
+  foreach my $dir (@dirs) {
+    $dir = basename($dir);
+    my $encdir = $dir;
+    $encdir =~ s/\ /%20/g;
+    print('<header><a href="/cgi-bin/writesba?' . $qs . "/" . $encdir . '">' . $dir . '</a></header>' . "\n");
+  }
+  print("</section><section>\n");
+  print('<header><a href="/cgi-bin/picksba">Back</a></header>' . "\n");
+}
+
+open FOOTER, "< ./FOOTER";
+print <FOOTER>;
+close FOOTER;

@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use File::Basename;
+
+$| = 1;
+
+print("HTTP/1.0 200 OK\n");
+print("Content-Type: text/html; charset=UTF-8\n\n");
+
+open HEADER, "< ./HEADER";
+print <HEADER>;
+close HEADER;
+
+print("MPD 1 - ");
+system('/usr/local/bin/mpc -p 6600 status');
+print("<br />\n");
+print("</section><section>\n");
+system('/usr/local/bin/mpc -p 6600 playlist | xargs -I XXX echo XXX "<br />"');
+
+print("</section><section>\n");
+
+print("MPD 2 - ");
+system('/usr/local/bin/mpc -p 6602 status');
+print("<br />\n");
+print("</section><section>\n");
+system('/usr/local/bin/mpc -p 6602 playlist | xargs -I XXX echo XXX "<br />"');
+
+print("</section><section>\n");
+
+print('<header><a href="/">Back</a></header>' . "\n");
+open FOOTER, "< ./FOOTER";
+print <FOOTER>;
+close FOOTER;

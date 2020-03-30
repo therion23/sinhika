@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+system('killall -9q jslisten > /dev/null 2> /dev/null &');
+system('/usr/local/bin/jslisten > /dev/null 2> /dev/null &');
+print("HTTP/1.1 200 OK\n");
+print("Location: /\n\n");

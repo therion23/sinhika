@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+system('sudo /etc/init.d/mpd restart > /dev/null 2> /dev/null &');
+system('sudo /etc/init.d/mpd2 restart > /dev/null 2> /dev/null &');
+print("HTTP/1.1 200 OK\n");
+print("Location: /\n\n");
