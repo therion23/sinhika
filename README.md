@@ -20,7 +20,7 @@ YOU ARE FULLY RESPONSIBLE FOR CHOOSING, INSTALLING, USAGE, AND THE RESULTS OF US
 
 Having said that, WE DISALLOW YOU TO USE THIS PROGRAM if You cannot abide to the above disclaimer, whatever Your reasons may be. This program is, although copyrighted by Nocturnal Productions, FREE SOFTWARE, and when You pay nothing, expect nothing!
 
-If you cannot abide to this simple Disclaimer, then i, Bo Krogsgaard, as the author, FORBID you to execute or in other ways use this Application, as *YOU* havent paid *ME* a single dime, pfennig or other monetary unit for your copy.
+If you cannot abide to this simple Disclaimer, then i, Bo Krogsgaard, as the responsible author of this project, FORBID you to execute or in other ways use this Application, as *YOU* havent paid *ME* a single dime, pfennig or other monetary unit for your copy.
 
 Alternative version:
 
