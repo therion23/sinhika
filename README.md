@@ -38,7 +38,7 @@ I'm trying to do you a favour, don't be a dick about it if i fail.
 
 Tinnitus is hell. If you go to an ear doctor, he or she might go "buy a radio". Facts are, it can come from many things, from a concussion to overexposure to loud noises to .. well, you name it. And as long as nobody can find the source, good luck finding a cure.
 
-Now, what a very clever guy (i believe it was Harry Nyquist, but i might be wrong) found out once, was that some frequencies can cancel out eachother. It is not that simple though. So drawing from that idea, this project sets up a sound card with independent channels for music and distraction frequencies, latter being binaural patterns or pure pink noise, modulated as you wish.
+Now, what a very clever guy (i believe it was Harry Nyquist, but i might be wrong) found out once, was that some frequencies can cancel out eachother. It is not that simple though, but a concept worth trying out in this context. So drawing from that idea, this project sets up a sound card with independent channels for music and distraction frequencies, latter being binaural patterns or pure pink noise, modulated as you wish.
 
 This does not fix any of your problems. But it might help a little bit.
 

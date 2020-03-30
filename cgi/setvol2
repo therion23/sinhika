@@ -1,9 +1,0 @@
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-
-my $vol = $ENV{'QUERY_STRING'};
-system('/usr/bin/amixer sset Default ' . $vol . '% > /dev/null 2> /dev/null &');
-print("HTTP/1.1 200 OK\n");
-print("Location: /\n\n");
