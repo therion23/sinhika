@@ -50,6 +50,8 @@ Realistically, you would like a little bit more. The Raspberry Pi Zero W was use
 
 Sound device wise, technically, the only requirement is ALSA compatibility. A large part of the "trick" to this is to split an ALSA device into separate software devices with separate volume controls - exactly like BeOS showed us ages ago, and Windows 10 attempts to do.
 
+The perl scripts will work with perl 5.10 upwards. The shell scripts should run under any bash at least down to 3.2, and will in the near future be made generic (if they aren't already).
+
 ## Software requirements
 
 Depending on your sense of adventure, there are different requirements.
