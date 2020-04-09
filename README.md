@@ -36,7 +36,7 @@ We are trying to do you a favour, don't be a dick about it if we fail.
 
 ## Synopsis
 
-Tinnitus is hell. If you go to an ear doctor, he or she might go "buy a radio". Facts are, it can come from many things, from a concussion to overexposure to loud noises to .. well, you name it. And as long as nobody can find the source, good luck finding a cure.
+Tinnitus is hell. If you go to an ear doctor, he or she might go "buy a radio". Facts are, it can come from many things, from a concussion to overexposure to loud noises to neck and/or jaw issues to .. well, you name it. Being led to think tinnitus is a single thing is a complete misconception, however, the symptom is the same.
 
 Now, what a very clever guy (i believe it was Harry Nyquist, but i might be wrong) found out once, was that some frequencies can cancel out eachother. It is not that simple though, but a concept worth trying out in this context. So drawing from that idea, this project sets up a sound card with independent channels for music and distraction frequencies, latter being binaural patterns or pure pink noise, modulated as you wish.
 
