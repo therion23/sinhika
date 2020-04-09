@@ -12,4 +12,4 @@ sudo chgrp -R staff /usr/local
 
 Given the fact that you are not likely to run this on a shared server, this is not considered a security hole.
 
-On a standard sinhika installation, everything happens in /usr/local the way described above. Also, the daemon processes run as a plain mortal user, which you have to pick by yourself.
+On a standard sinhika installation, everything happens in /usr/local the way described above. Also, the daemon processes run as a plain mortal user, which you have to pick by yourself - and obviously add to the staff and audio groups.
