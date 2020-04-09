@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use v5.10;
+
 use strict;
 use warnings;
 use File::Basename;
@@ -19,10 +21,10 @@ if (!defined($qs)) {
   system('top -1 -b -n 1 | head -n 8 | xargs -I XXX echo XXX "<br />"');
   print("</section><section>\n");
   print("MPD 1 - ");
-  system('/usr/local/bin/mpc -p 6600 status');
+  system('/usr/bin/mpc -p 6600 status');
   print("</section><section>\n");
   print("MPD 2 - ");
-  system('/usr/local/bin/mpc -p 6602 status');
+  system('/usr/bin/mpc -p 6602 status');
   print("</section><section>\n");
   print("SBAgen - ");
   system('ps ax | grep sbagen | grep -v grep | tail -c +28');
@@ -46,8 +48,26 @@ if (!defined($qs)) {
       system('/usr/bin/sudo /etc/init.d/mpd restart > /dev/null 2> /dev/null &');
       system('/usr/bin/sudo /etc/init.d/mpd2 restart > /dev/null 2> /dev/null &');
     }
-    when ('killplay') { system('/usr/local/killall -9q play > /dev/null 2> /dev/null &'); }
+    when ('killplay') { system('/usr/bin/killall -9q play > /dev/null 2> /dev/null &'); }
+    when ('killsba') { system('/usr/bin/killall -9q sbagen > /dev/null 2> /dev/null &'); }
     when ('metronome') { system('/usr/bin/aoss ctronome > /dev/null 2> /dev/null &'); }
+    when ('playlist') {
+      print("MPD 1 - "); system('/usr/local/bin/mpc -p 6600 status'); print("<br />\n");
+      print("</section><section>\n");
+      system('/usr/local/bin/mpc -p 6600 playlist | xargs -I XXX echo XXX "<br />"');
+      print("</section><section>\n");
+      print("MPD 2 - "); system('/usr/local/bin/mpc -p 6602 status'); print("<br />\n");
+      print("</section><section>\n");
+      system('/usr/local/bin/mpc -p 6602 playlist | xargs -I XXX echo XXX "<br />"');
+      print("</section><section>\n");
+      print('<header><a href="/">Back</a></header>' . "\n");
+    }
+    when ('playpause') { system('/usr/bin/mpc -P xxx toggle > /dev/null 2> /dev/null &'); }
+    when ('playrandom') {
+      system('/usr/bin/mpc -P xxx clear > /dev/null 2> /dev/null &');
+      system('/usr/local/bin/mpdrandom -l --password xxx > /dev/null 2> /dev/null &');
+    }
+    when ('reboot') { system('/usr/bin/sudo reboot > /dev/null 2> /dev/null &'); }
   }
 }
 
