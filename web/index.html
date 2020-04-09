@@ -31,7 +31,7 @@ $(document).ready(function(){
   $("#killall").click(function(){
     var r = confirm("Are you sure?");
     if (r == true) {
-      $.get("/cgi-bin/killall");
+      $.get("/cgi-bin/ganesha?killall");
     }
   });
   $("#killall").hover(function(){ $("#killall").css("color", "yellow") },
@@ -42,7 +42,7 @@ $(document).ready(function(){
   $("#killmpd").click(function(){
     var r = confirm("Are you sure?");
     if (r == true) {
-      $.get("/cgi-bin/killmpd");
+      $.get("/cgi-bin/ganesha?killmpd");
     }
   });
   $("#killmpd").hover(function(){ $("#killmpd").css("color", "yellow") },
@@ -53,7 +53,7 @@ $(document).ready(function(){
   $("#killjs").click(function(){
     var r = confirm("Are you sure?");
     if (r == true) {
-      $.get("/cgi-bin/killjs");
+      $.get("/cgi-bin/ganesha?killjs");
     }
   });
   $("#killjs").hover(function(){ $("#killjs").css("color", "yellow") },
@@ -64,7 +64,7 @@ $(document).ready(function(){
   $("#reboot").click(function(){
     var r = confirm("Are you sure?");
     if (r == true) {
-      $.get("/cgi-bin/reboot");
+      $.get("/cgi-bin/ganesha?reboot");
     }
   });
   $("#reboot").hover(function(){ $("#reboot").css("color", "yellow") },
@@ -82,16 +82,14 @@ $(document).ready(function(){
 </section>
 
 <section>
-<div><a href="/cgi-bin/playrandom">MPD Random Album</a><br /><a href="/cgi-bin/stopmpd">(Play/Pause)</a></div>
-<div><a href="/cgi-bin/sba">SBAgen (Previous)</a><br /><a href="/cgi-bin/picksba">(Browse)</a>&nbsp;<a href="/cgi-bin/killsba">(Stop)</a></div>
-<div><a href="/cgi-bin/heartbeat">Heartbeat</a><br /><a href="/cgi-bin/">(edit)</a>&nbsp;<a href="/cgi-bin/killct">(stop)</a></div>
-<div><a href="/cgi-bin/keepalive">KeepAlive (24/192)</a><br /><a href="/cgi-bin/killalive">(Stop)</a></div>
-<div><a href="/cgi-bin/playlist">Server playlist</a><br />(Raw output)</div>
-<div><a href="/cgi-bin/status">Server status</a><br />(System, MPD, SBA)</div>
-<div><a href="/cgi-bin/">Scheduler</a><br />(Not implemented)</div>
+<div><a href="/cgi-bin/ganesha?playrandom">MPD Random Album</a><br /><a href="/cgi-bin/ganesha?stopmpd">(Play/Pause)</a></div>
+<div><a href="/cgi-bin/sba">SBAgen (Previous)</a><br /><a href="/cgi-bin/picksba">(Browse)</a>&nbsp;<a href="/cgi-bin/ganesha?killsba">(Stop)</a></div>
+<div><a href="/cgi-bin/ganesha?heartbeat">Heartbeat</a><br /><a href="/cgi-bin/">(edit)</a>&nbsp;<a href="/cgi-bin/ganesha?killct">(stop)</a></div>
+<div><a href="/cgi-bin/ganesha?keepalive">KeepAlive (24/192)</a><br /><a href="/cgi-bin/ganesha?killalive">(Stop)</a></div>
+<div><a href="/cgi-bin/ganesha?playlist">Server playlist</a><br />(Raw output)</div>
+<div><a href="/cgi-bin/ganesha">Server status</a><br />(System, MPD, SBA)</div>
+<div><a href="">Scheduler</a><br />(Not implemented)</div>
 <div id="killall">Silence<br />(kill everyone now)</div>
-<!-- <div id="killmpd">Restart MPD<br />(Just in case)</div> -->
-<!-- <div id="killjs">(Re)start jslisten<br />(After reboot)</div> -->
 <div id="reboot">Reboot<br />(Last resort)</div>
 <div>&nbsp;<br />&nbsp;</div>
 <div>&nbsp;<br />&nbsp;</div>
