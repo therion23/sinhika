@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # gcc <= 6
 # OPT='-DT_LINUX -Wall -O3 -s'
 # gcc >= 7
@@ -8,7 +9,9 @@ if [ ".$OPT." == ".." ] ; then
   echo edit $0 and pick a gcc version
   exit 1
 else
-  LIBS='-lm -lpthread -lmad -lvorbisidec'
-  OPT="-DMP3_DECODE -DOGG_DECODE $OPT"
+  LIBS='-lm -lpthread'
+# Uncomment the two lines below for integrated mp3 and ogg support
+# LIBS='$LIBS -lmad -lvorbisidec'
+# OPT="-DMP3_DECODE -DOGG_DECODE $OPT"
   cc $OPT sbagen.c $LIBS -o sbagen || exit 1
 fi
