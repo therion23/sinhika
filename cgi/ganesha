@@ -32,7 +32,23 @@ if (!defined($qs)) {
   print("</section><section>\n");
   print('<header><a href="/">Back</a></header>' . "\n");
 } else {
-
+  given($qs) {
+    when ('heartbeat') { system('/usr/bin/aoss ctronome -w1 /usr/local/share/ctronome/heartbeat.wav -w2 /usr/local/share/ctronome/heartbeat.wav > /dev/null 2> /dev/null &'); }
+    when ('keepalive') { system('/usr/bin/speaker-test -r 96000 -f 24000 -t sine -l 0 -X > /dev/null 2> /dev/null &'); }
+    when ('killalive') { system('/usr/bin/killall -9q speaker-test > /dev/null 2> /dev/null &'); }
+    when ('killall') { system('/usr/bin/killall -9q play sbagen ctronome > /dev/null 2> /dev/null &'); }
+    when ('killct') { system('/usr/bin/killall -9q ctronome > /dev/null 2> /dev/null &'); }
+    when ('killjs') {
+      system('/usr/bin/killall -9q jslisten > /dev/null 2> /dev/null &');
+      system('/usr/local/bin/jslisten > /dev/null 2> /dev/null &');
+    }
+    when ('killmpd') {
+      system('/usr/bin/sudo /etc/init.d/mpd restart > /dev/null 2> /dev/null &');
+      system('/usr/bin/sudo /etc/init.d/mpd2 restart > /dev/null 2> /dev/null &');
+    }
+    when ('killplay') { system('/usr/local/killall -9q play > /dev/null 2> /dev/null &'); }
+    when ('metronome') { system('/usr/bin/aoss ctronome > /dev/null 2> /dev/null &'); }
+  }
 }
 
 open FOOTER, "< ./FOOTER";

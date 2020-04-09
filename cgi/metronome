@@ -1,9 +1,0 @@
-#!/usr/bin/perl
-
-use strict;
-use warnings;
-
-# echo Keeping the beat ticking
-system('aoss ctronome > /dev/null 2> /dev/null &');
-print("HTTP/1.1 200 OK\n");
-print("Location: /\n\n");
