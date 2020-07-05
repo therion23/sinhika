@@ -4,7 +4,7 @@ A framework and patchwork to possibly abstract from tinnitus.
 
 ## Before you read on
 
-This is not run by any financial interests. The sinhika project is copyrighted the creators, but free for all to grab a copy and use, as long as the terms in the file LICENSE is met.
+This is not run by any financial interests. The sinhika project is copyrighted the creators, but free for all to grab a copy and use, as long as the terms in these terms are met.
 
 We accept no money, bribes, or anything else. If you want to help, go to your local health department, and give them some kind of awareness what tinnitus is.
 
