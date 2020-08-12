@@ -10,17 +10,9 @@ For more info, please refer to [the SBAgen homepage][1].
 
 ## Compiling
 
-Grab the tarball from the above link. Unpack and enter the directory.
+Clone https://github.com/DariuszO/sbagen-alsa and enter the folder. To compile without mp3 and ogg support, run:
 
-Now, if you want integrated mp3 and ogg playback support, you must apply the two diffs (or edit the files by hand). Also, you will need to pick up a couple of dependencies through apt or whatever your package manager is:
-
-- libvorbisidec-dev
-- libogg-dev
-- libmad0-dev
-
-Then, edit the build script. Uncomment the line that corresponds to your gcc version. If you prepared the files for mp3 and ogg playback in the above step, you will also need to uncomment those two lines in the script.
-
-Run the build script. You will most likely get a couple of warnings, but nothing that cannot be ignored.
+> gcc -std=gnu18 -DT_LINUX_ALSA -Wall -g -O2 -o sbagen -fno-omit-frame-pointer sbagen.c -lm -lpthread `pkg-config --cflags alsa` `pkg-config --libs alsa`
 
 ## Installing
 
