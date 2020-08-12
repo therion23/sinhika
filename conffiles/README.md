@@ -1,6 +1,6 @@
 # conffiles
 
-## asound.conf
+## asound.conf.(devicename)
 
 The whole magick in this is threefold:
 
