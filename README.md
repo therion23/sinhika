@@ -55,5 +55,3 @@ The perl scripts will work with perl 5.10 upwards. The shell scripts should run 
 ## Software requirements
 
 Depending on your sense of adventure, there are different requirements.
-
-For any Debian based Linux distribution, we will soon offer a metapackage to keep your flavour up to date.
