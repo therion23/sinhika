@@ -12,7 +12,7 @@ For more info, please refer to [the SBAgen homepage][1].
 
 Clone https://github.com/DariuszO/sbagen-alsa and enter the folder. To compile without mp3 and ogg support, run:
 
-> gcc -std=gnu18 -DT_LINUX_ALSA -Wall -g -O2 -o sbagen -fno-omit-frame-pointer sbagen.c -lm -lpthread \`pkg-config --cflags alsa\` \`pkg-config --libs alsa\`
+> gcc -std=gnu89 -DT_LINUX_ALSA -Wall -g -O2 -o sbagen -fno-omit-frame-pointer sbagen.c -lm -lpthread \`pkg-config --cflags alsa\` \`pkg-config --libs alsa\`
 
 ## Installing
 
