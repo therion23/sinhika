@@ -33,17 +33,3 @@ ctl.mpd {
         type hw
         card 0
 }
-
-# pcm.plugequal {
-#   type equal;
-#   slave.pcm "plug:dmix";
-# }
-
-# pcm.equal {
-#   type plug;
-#   slave.pcm plugequal;
-# }
-
-# ctl.equal {
-#   type equal;
-# }
