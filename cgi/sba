@@ -7,6 +7,6 @@ open HEADER, "< ../config/sba";
 my $dir = <HEADER>;
 close HEADER;
 
-system('aoss sbagen "' . $dir . '" > /dev/null 2> /dev/null &');
+system('sbagen -d sba "' . $dir . '" > /dev/null 2> /dev/null &');
 print("HTTP/1.1 200 OK\n");
 print("Location: /\n\n");
