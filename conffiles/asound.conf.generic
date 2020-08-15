@@ -1,0 +1,219 @@
+#################################################################
+#
+# asound.conf.generic
+#
+# Generic asound.conf for Sinhika's softvol devices.
+#
+# Modified from one by user bram2000 on the Gentoo forum.
+# An abundance of thanks for his work.
+#
+# To configure, simply change all references to "2" here with
+# the number of your sound device. To find this number, run:
+#
+# aplay -l
+#
+# If this value changes on reboot or plugging it in, you can
+# hardcode the values using "index" parameters in
+# /etc/modprobe.d/alsa.conf - like this:
+#
+# options snd_usb_audio index=0
+# options snd_hda_intel index=1
+#
+# To install, copy your modified file to /etc/asound.conf and
+# restart the ALSA layer by running:
+#
+# sudo /etc/init.d/alsa-utils restart
+#
+# Note that you must use the sound devices before they show up
+# in alsamixer, like this:
+#
+# speaker-test -D mpd -c 2
+# speaker-test -D sba -c 2
+#
+# and then restart the ALSA layer *again* before you can modify
+# the volumes.
+#
+#################################################################
+
+#################################################################
+#
+# PCM defaults                                                  #
+#
+#################################################################
+
+defaults.ctl.card 2
+defaults.pcm.card 2
+defaults.pcm.device 2
+
+#################################################################
+#
+# PCM output devices
+#
+# Define pcm output devices using dmix for mixing and
+# the appropriate hardware device for output.  In most
+# cases there will only be one here but if you have a
+# second sound card or USB headset then you can define
+# more.
+#
+#################################################################
+
+# First sound card uses hw:0,0 as the output device
+
+pcm.output_main
+{
+        type dmix
+        ipc_key 1024
+        ipc_perm 0666
+
+        slave
+        {
+                pcm "hw:2,0"
+                period_time 0
+                period_size 1024
+                buffer_size 8192
+                #rate 8000
+        }
+}
+
+# Use only the first two channels for dmix
+
+bindings
+{
+        0 0     # from 0 => to 0
+        1 1     # from 1 => to 1
+}
+
+#################################################################
+#
+# Hardware control devices
+#
+# These devices allow ALSA to control various aspects of the
+# sound cards.  Below are simple mixer definitions for two
+# devices.
+#
+#################################################################
+
+ctl.mixer0
+{
+        type hw
+        card 2
+}
+
+#################################################################
+#
+# Volume controls
+#
+# Here we will define some SoftVol controls
+#
+#################################################################
+
+pcm.output_main_control
+{
+        type softvol
+        slave.pcm "output_main"
+
+        control
+        {
+                name "All"
+                card 2
+        }
+}
+
+# One for the default output from things that
+# we haven't or can't configure
+
+pcm.default_control
+{
+        type softvol
+        slave.pcm "output_main_control"
+
+        control
+        {
+                name "Unassigned"
+                card 2
+        }
+}
+
+# One for MPD
+
+pcm.mpd_control
+{
+        type softvol
+        slave.pcm "output_main_control"
+
+        control
+        {
+                name "MPD"
+                card 2
+        }
+}
+
+# One for SBAgen
+
+pcm.sba_control
+{
+        type softvol
+        slave.pcm "output_main_control"
+
+        control
+        {
+                name "SBA"
+                card 2
+        }
+}
+
+# One for the system output such as Gnome
+
+pcm.system_control
+{
+        type softvol
+        slave.pcm "output_main_control"
+
+        control
+        {
+                name "System"
+                card 2
+        }
+}
+
+#################################################################
+#
+# Default ALSA devices
+#
+# Default pcm devices should use our asymetric device too
+#
+#################################################################
+
+pcm.!default
+{
+        type plug
+        slave.pcm "default_control"
+}
+
+pcm.default
+{
+        type plug
+        slave.pcm "default_control"
+}
+
+
+# Custom plug devices
+
+
+pcm.mpd
+{
+        type plug
+        slave.pcm "mpd_control"
+}
+
+pcm.sba
+{
+        type plug
+        slave.pcm "sba_control"
+}
+
+pcm.system
+{
+        type plug
+        slave.pcm "system_control"
+}
