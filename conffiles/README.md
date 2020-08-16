@@ -26,6 +26,22 @@ speaker-test -D mpd
 
 Then they should both show up in alsamixer.
 
+The mpd.conf output should look a bit like this:
+
+```
+audio_output {
+        type            "alsa"
+        name            "Sinhika"
+        device          "mpd"           # optional
+        mixer_type      "hardware"      # optional
+        mixer_control   "MPD"           # optional
+        auto_resample   "no"
+        auto_format     "no"
+        auto_channels   "no"
+        replay_gain_handler     "none"
+}
+```
+
 ## rc.local
 
 Append this to your /etc/rc.local - it fixes a problem MPD has with binding a specific port to both IPv6 and IPv4.
