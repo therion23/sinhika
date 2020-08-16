@@ -2,15 +2,13 @@
 
 ## asound.conf.(devicename)
 
-The whole magick in this is threefold:
+The whole magick in this is twofold:
 
 - one, you split your default output device into two, so you can separately control the volume levels of your music and your noise (which is which is pretty much up to yourself).
 
 - two, you get the advantage of software volume controlling DAC's and other sound devices which do not have hardware volume controls - notably, the pHAT DAC and the HifiBerry it was modelled after.
 
-- three, you get a definition for the OSS layer emulation that you can tinker with yourself if need be.
-
-Put this in /etc/asound.conf and then
+Modify the appropriate file, copy it to /etc/asound.conf and then
 
 ```bash
 sudo /etc/init.d/alsa-utils restart
