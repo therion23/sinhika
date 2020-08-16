@@ -28,14 +28,14 @@ The mpd.conf output should look a bit like this:
 
 ```
 audio_output {
-        type            "alsa"
-        name            "Sinhika"
-        device          "mpd"           # optional
-        mixer_type      "hardware"      # optional
-        mixer_control   "MPD"           # optional
-        auto_resample   "no"
-        auto_format     "no"
-        auto_channels   "no"
+        type                    "alsa"
+        name                    "Sinhika"
+        device                  "mpd"
+        mixer_type              "hardware"
+        mixer_control           "MPD"
+        auto_resample           "no"
+        auto_format             "no"
+        auto_channels           "no"
         replay_gain_handler     "none"
 }
 ```
