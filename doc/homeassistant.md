@@ -1,6 +1,6 @@
 # Home Assistant integration
 
-There is a lot of README's in this project. If you have at least followed the one up in (../conffiles/)[../conffiles] then you should be up to speed with this one.
+There is a lot of README's in this project. If you have at least followed the one from [conffiles](../conffiles) then you should be up to speed with this one.
 
 There is also an abundant lack of setting up Sinhika real easily, so here's the least strainful way, which does not require a degree in rocket science - you simply have to follow this step by step.
 
