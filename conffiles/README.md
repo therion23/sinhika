@@ -24,7 +24,7 @@ speaker-test -D mpd
 
 Then they should both show up in alsamixer.
 
-The mpd.conf output should look a bit like this:
+The mpd.conf output section should look a bit like this:
 
 ```
 audio_output {
