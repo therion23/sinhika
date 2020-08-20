@@ -10,9 +10,9 @@ There is also an abundant lack of setting up Sinhika real easily, so here's the 
 
 - The ability to run Sinhika on the same machine (not entirely necessary, as long as you know how to set up SSH keypairs).
 
-- Following (../conffiles/README.md)
+- Following [the ALSA setup](../conffiles/README.md)
 
-- Following (../conffiles/MPD.md)
+- Following [the MPD setup](../conffiles/MPD.md)
 
 ## Tools of the trade
 
