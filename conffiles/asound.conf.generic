@@ -162,20 +162,6 @@ pcm.sba_control
         }
 }
 
-# One for the system output such as Gnome
-
-pcm.system_control
-{
-        type softvol
-        slave.pcm "output_main_control"
-
-        control
-        {
-                name "System"
-                card 2
-        }
-}
-
 #################################################################
 #
 # Default ALSA devices
@@ -210,10 +196,4 @@ pcm.sba
 {
         type plug
         slave.pcm "sba_control"
-}
-
-pcm.system
-{
-        type plug
-        slave.pcm "system_control"
 }

@@ -8,17 +8,10 @@ pcm.softvol {
         card 0
     }
 }
-       
+
 pcm.!default {
     type plug
     slave.pcm "softvol"
-}
-
-pcm.dsp0 {
-    type plug
-    slave.pcm "dmix"
-    control.name "SBAgen Playback Volume"
-    control.card 0
 }
 
 # MPD volume
