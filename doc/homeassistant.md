@@ -111,6 +111,8 @@ And a third:
 
 Note that you can set the maximum and minimum volumes anywhere between 0 and 100 - for instance, setting maximum for Master at 40 will, given a decent output device, be pretty much enough for comfortable listening without further damage to your ears. Also, it has the side effect of being easier to navigate on touch devices.
 
+Note also that you can only rename the entities after creating them, saving, and then editing them. Ho hum.
+
 As if that wasn't enough, make a folder in your Home Assistant config folder, name it python_scripts and slap this into a file inside it, naming it set_state.py
 
 ```python
@@ -142,3 +144,30 @@ else:
 
     hass.states.set(inputEntity, inputState, inputAttributesObject)
 ```
+
+Finally, you need some Automations. and these get a git tricky if you are not too familiar with Home Assistant. You need to add three of them, replace "master" with "mpd" and "sba" in your copies:
+
+  - Name: ALSA Master
+  - Trigger type: State
+  - Entity: sensor.alsa_master
+
+And in actions, click the triple dot, choose "edit as YAML", and paste this:
+
+```
+data_template:
+  entity_id: input_number.volume_master
+  state: '{{states(''sensor.alsa_master'') }}'
+service: python_script.set_state
+```
+
+## Lovelace
+
+You can create a card of Entities here, and add:
+
+- input_number.volume_master
+- input_number.volume_mpd
+- input_number.volume_sba
+
+The narrower your min-to-max gap, the easier it is to navigate on touch devices.
+
+Yeah, it's not simple, but got a better success rate than me writing a web interface.
