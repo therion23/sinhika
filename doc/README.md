@@ -18,6 +18,4 @@ Sound device wise, technically, the only requirement is ALSA compatibility. A la
 
 The perl scripts will work with perl 5.10 upwards. The shell scripts should run under any bash at least down to 3.2, and will in the near future be made generic (if they aren't already).
 
-## Software requirements
-
-Depending on your sense of adventure, there are different requirements.
+It will still run on most stripped down linux-capable platforms, including the £10 Pi Zero W, which hardly even breaks sweat when you run a full blown Sinhika on it - that does take some tweaking, but that will be documented in due time (promise!).
