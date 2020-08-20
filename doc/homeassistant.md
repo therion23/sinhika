@@ -162,9 +162,9 @@ service: python_script.set_state
 
 To make sense of everything when you (re)start Home Assistant, some initial values have to be grabbed. This can be done real easily by creating an Automation with the trigger type of Home Assistant and event Start.
 
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_master
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_mpd
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_sba
+- Action: Call service, Service: automation.trigger, Name: automation.alsa_master
+- Action: Call service, Service: automation.trigger, Name: automation.alsa_mpd
+- Action: Call service, Service: automation.trigger, Name: automation.alsa_sba
 
 ## Lovelace
 
