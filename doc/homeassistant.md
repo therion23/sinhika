@@ -16,7 +16,8 @@ Okay, so you got the asound.conf in place, you got MPD running, it is time to cr
 
 First of all, it would be so much easier if you run Home Assistant as your own user. Also, make sure your user has passwordless sudo rights, as in:
 
-```%sudo   ALL=(ALL) NOPASSWD: ALL
+```bash
+%sudo   ALL=(ALL) NOPASSWD: ALL
 ```
 
 ("sudo" might be "admin" or "staff", depending on your flavour)
