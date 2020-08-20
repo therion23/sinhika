@@ -10,11 +10,11 @@ There is also an abundant lack of setting up Sinhika real easily, so here's the 
 
 - The ability to run Sinhika on the same machine (not entirely necessary, as long as you know how to set up SSH keypairs).
 
-- Following [the ALSA setup](../conffiles/README.md)
+- Following [the ALSA setup](../conffiles/README.md) - which is mostly documented
 
-- Following [the MPD setup](../conffiles/MPD.md)
+- Following [the MPD setup](../conffiles/MPD.md) - which is partially documented
 
-- Following [the SBAgen setup](../conffiles/SBA.md)
+- Following [the SBAgen setup](../conffiles/SBA.md) - which is not documented yet at all
 
 ## Tools of the trade
 
@@ -110,3 +110,35 @@ And a third:
 - Entity ID: input_number.volume_sba
 
 Note that you can set the maximum and minimum volumes anywhere between 0 and 100 - for instance, setting maximum for Master at 40 will, given a decent output device, be pretty much enough for comfortable listening without further damage to your ears. Also, it has the side effect of being easier to navigate on touch devices.
+
+As if that wasn't enough, make a folder in your Home Assistant config folder, name it python_scripts and slap this into a file named set_state.py
+
+```python
+#==================================================================================================
+#  python_scripts/set_state.py
+#==================================================================================================
+
+#--------------------------------------------------------------------------------------------------
+# Set the state or other attributes for the entity specified in the Automation Action
+#--------------------------------------------------------------------------------------------------
+
+inputEntity = data.get('entity_id')
+if inputEntity is None:
+    logger.warning("===== entity_id is required if you want to set something.")
+else:
+    inputStateObject = hass.states.get(inputEntity)
+    inputState = inputStateObject.state
+    inputAttributesObject = inputStateObject.attributes.copy()
+
+    for item in data:
+        newAttribute = data.get(item)
+        logger.debug("===== item = {0}; value = {1}".format(item,newAttribute))
+        if item == 'entity_id':
+            continue            # already handled
+        elif item == 'state':
+            inputState = newAttribute
+        else:
+            inputAttributesObject[item] = newAttribute
+
+    hass.states.set(inputEntity, inputState, inputAttributesObject)
+```
