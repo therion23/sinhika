@@ -145,7 +145,7 @@ else:
     hass.states.set(inputEntity, inputState, inputAttributesObject)
 ```
 
-Finally, you need some Automations. and these get a git tricky if you are not too familiar with Home Assistant. You need to add three of them, replace "master" with "mpd" and "sba" in your copies:
+Finally, you need some Automations. and these get a bit tricky if you are not too familiar with Home Assistant. You need to add three of them, replace "master" with "mpd" and "sba" in your copies:
 
   - Name: ALSA Master
   - Trigger type: State
