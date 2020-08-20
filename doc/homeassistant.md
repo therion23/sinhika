@@ -26,7 +26,7 @@ First of all, it would be so much easier if you run Home Assistant as your own u
 %sudo ALL=(ALL) NOPASSWD: ALL
 ```
 
-("sudo" might be "admin" or "staff", depending on your flavour).
+("%sudo" might be "%admin" or "%staff", depending on your flavour).
 
 Second, you want to go to your Profile in Home Assistant and enable Advanced Mode. You will learn why later.
 
