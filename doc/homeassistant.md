@@ -160,6 +160,12 @@ data_template:
 service: python_script.set_state
 ```
 
+To make sense of everything when you (re)start Home Assistant, some initial values have to be grabbed. This can be done real easily by creating an Automation with the trigger type of Home Assistant and event Start.
+
+- Action: Call service, Service: automation.trigger, Name: automation: alsa_master
+- Action: Call service, Service: automation.trigger, Name: automation: alsa_mpd
+- Action: Call service, Service: automation.trigger, Name: automation: alsa_sba
+
 ## Lovelace
 
 You can create a card of Entities here, and add:
@@ -169,11 +175,5 @@ You can create a card of Entities here, and add:
 - input_number.volume_sba
 
 The narrower your min-to-max gap, the easier it is to navigate on touch devices.
-
-To make sense of everything when you (re)start Home Assistant, some initial values have to be grabbed. This can be done real easily by creating an Automation with the trigger type of Home Assistant and event Start.
-
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_master
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_mpd
-- Action: Call service, Service: automation.trigger, Name: automation: alsa_sba
 
 Yeah, it's not simple, but got a better success rate than me writing a web interface.
