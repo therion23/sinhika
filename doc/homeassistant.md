@@ -44,7 +44,7 @@ media_player:
     name: Music on Sinhika
 ```
 
-This gives you the entity media_player.music_on_sinhika which has some very simple media controls. Reaload and slap one into your Lovelace layout.
+This gives you the entity media_player.music_on_sinhika which has some very simple media controls. Reload and slap one into your Lovelace layout.
 
 Now, head to a shell prompt, and run alsamixer. The leftmost bar is usually your master volume - it can be called "default", "sysdefault", "Master", "Speakers" and possibly a whole lot of other things you would not name a pet (or a significant other). Make note of this name - i will refer to it as Master from here.
 
@@ -111,7 +111,7 @@ And a third:
 
 Note that you can set the maximum and minimum volumes anywhere between 0 and 100 - for instance, setting maximum for Master at 40 will, given a decent output device, be pretty much enough for comfortable listening without further damage to your ears. Also, it has the side effect of being easier to navigate on touch devices.
 
-As if that wasn't enough, make a folder in your Home Assistant config folder, name it python_scripts and slap this into a file named set_state.py
+As if that wasn't enough, make a folder in your Home Assistant config folder, name it python_scripts and slap this into a file inside it, naming it set_state.py
 
 ```python
 #==================================================================================================
