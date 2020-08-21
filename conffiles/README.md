@@ -20,7 +20,7 @@ speaker-test -D sba
 
 Then they should both show up in alsamixer.
 
-Now, go read [../doc/MPD.md]
+Now, go read [the MPD setup](../doc/MPD.md)
 
 ## rc.local
 
