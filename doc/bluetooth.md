@@ -98,4 +98,4 @@ Restart MPD, and you will most likely notice sound coming out of both your defau
 mpc outputs
 ```
 
-From there, it's just a matter of "mpc disable 1" and "mpc enable 2", or however your devices are enumerated by MPD.
+From there, it's just a matter of "mpc disable 1" and "mpc enable 2", or however your devices are enumerated by MPD. Those friendly names you gave the devices come in handy now .. right?
