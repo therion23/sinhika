@@ -81,14 +81,14 @@ Now, edit /etc/mpd.conf so we can pick the Bluetooth device as output:
 
 ```
 audio_output {
-        type            "alsa"
-        name            "BT Headset"
-        device          "bluealsa"      # optional
-        mixer_type      "software"      # optional
-        auto_resample   "no"
-        auto_format     "no"
-        auto_channels   "no"
-        replay_gain_handler     "none"
+        type                  "alsa"
+        name                  "BT Headset"
+        device                "bluealsa"
+        mixer_type            "software" # This needs fixing
+        auto_resample         "no"
+        auto_format           "no"
+        auto_channels         "no"
+        replay_gain_handler   "none"
 }
 ```
 
