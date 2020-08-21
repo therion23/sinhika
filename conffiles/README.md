@@ -12,33 +12,15 @@ Modify the appropriate file, copy it to /etc/asound.conf and then
 
 ```bash
 sudo /etc/init.d/alsa-utils restart
-speaker-test
-```
-
-(hit ctrl-c)
-
-```bash
 speaker-test -D mpd
-```  
 (hit ctrl-c)
+speaker-test -D sba
+(hit ctrl-c)
+```
 
 Then they should both show up in alsamixer.
 
-The mpd.conf output section should look a bit like this:
-
-```
-audio_output {
-        type                    "alsa"
-        name                    "Sinhika"
-        device                  "mpd"
-        mixer_type              "hardware"
-        mixer_control           "MPD"
-        auto_resample           "no"
-        auto_format             "no"
-        auto_channels           "no"
-        replay_gain_handler     "none"
-}
-```
+Now, go read [../doc/MPD.md]
 
 ## rc.local
 
