@@ -77,6 +77,8 @@ shell_command:
   set_sba_volume: amixer set SBA - '{{ states.input_number.volume_sba.state | int}}'% -M
 ```
 
+Where the sensors are for reading from ALSA, the above commands are for writing to ALSA. Mapped (logarithmic) volumes are used here, just remove the trailing "-M" if you prefer raw volumes.
+
 We are half way done!
 
 Go to Configurations -> Helpers and add three:
@@ -109,7 +111,7 @@ And a third:
 - Unit of measurement: %
 - Entity ID: input_number.volume_sba
 
-Note that you can set the maximum and minimum volumes anywhere between 0 and 100 - for instance, setting maximum for Master at 40 will, given a decent output device, be pretty much enough for comfortable listening without further damage to your ears. Also, it has the side effect of being easier to navigate on touch devices.
+These are the sliders you can drop into Lovelace. Note that you can set the maximum and minimum volumes anywhere between 0 and 100 - for instance, setting maximum for Master at 40 will, given a decent output device, be pretty much enough for comfortable listening without further damage to your ears. Also, it has the side effect of being easier to navigate on touch devices.
 
 Note also that you can only rename the entities after creating them, saving, and then editing them. Ho hum.
 
@@ -144,6 +146,8 @@ else:
 
     hass.states.set(inputEntity, inputState, inputAttributesObject)
 ```
+
+This is a quick and dirty hack that lets you copy the state from one sensor or entity to another. They are really only for cosmetics, however, it is quite handy that ones ALSA and Home Assistant volume sliders are in sync.
 
 Finally, you need some Automations. and these get a bit tricky if you are not too familiar with Home Assistant. You need to add three of them, replace "master" with "mpd" and "sba" in your copies:
 
