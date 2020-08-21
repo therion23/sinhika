@@ -8,7 +8,7 @@ CAVEAT EMPTOR - This "works", but there are a lot of shortcomings - for one, har
 
 ## Prerequisites
 
-The following is based on a writeup by user guidol at the Armbian forums - i have removed a couple of unnecessary steps:
+The following is [based on a writeup by user guidol][1] at the Armbian forums - i have removed a couple of unnecessary steps.
 
 First of all you want to grab all the dependencies:
 ```
@@ -99,3 +99,5 @@ mpc outputs
 ```
 
 From there, it's just a matter of "mpc disable 1" and "mpc enable 2", or however your devices are enumerated by MPD. Those friendly names you gave the devices come in handy now .. right?
+
+[1]: https://forum.armbian.com/topic/6480-bluealsa-bluetooth-audio-using-alsa-not-pulseaudio/?do=findComment&comment=102525
