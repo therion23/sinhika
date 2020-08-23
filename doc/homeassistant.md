@@ -52,18 +52,18 @@ Back to configuration.yaml:
 
 ```
 sensor:
-- platform: command_line
-  name: ALSA Master
-  command: amixer -M sget Master | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
-  scan_interval: 5
-- platform: command_line
-  name: ALSA MPD
-  command: amixer -M sget MPD | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
-  scan_interval: 5
-- platform: command_line
-  name: ALSA SBA
-  command: amixer -M sget SBA | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
-  scan_interval: 5
+  - platform: command_line
+    name: ALSA Master
+    command: amixer -M sget Master | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
+    scan_interval: 5
+  - platform: command_line
+    name: ALSA MPD
+    command: amixer -M sget MPD | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
+    scan_interval: 5
+  - platform: command_line
+    name: ALSA SBA
+    command: amixer -M sget SBA | grep "Front Left:" | cut -d "[" -f 2 | cut -d "%" -f 1
+    scan_interval: 5
 ```
 
 This sets up three sensors to expose the volume levels you want to be able to mix in a Sinhika. scan_interval is really only important if you think of changing volumes outside of Home Assistant - setting it lower would possibly give an unnecessary load on your server - you choose.
